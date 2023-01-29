@@ -1,14 +1,20 @@
 import React, { useState, useEffect } from "react";
+//import Estado from "./Filters/Categorias/Estado";
+import Filter from "./Filters/Filter";
 import TarjetaPersonaje from "./TarjetaPersonaje";
 
 export default function PersonajesInfo(){
-    
+
     const [personajes, setPersonajes] = useState([]);
+    let [estado, setEstado] = useState("Dead");
+    let [especie, setEspecie] = useState("Human");
+
 
     // const [contador, setContador] = useState(0);
+    let api = `https://rickandmortyapi.com/api/character/?status=${estado}&species=${especie}`;
 
     const obtenerPersonajes = async () => {
-        let resultado = await fetch("https://rickandmortyapi.com/api/character");
+        let resultado = await fetch(api);
         let datos = await resultado.json();
 
         //console.log(datos);
@@ -18,14 +24,14 @@ export default function PersonajesInfo(){
 
     /** FILTRO */
 
-    const [filtro, setFiltro] = useState("");
+    /**const [filtro, setFiltro] = useState("");
 
     const filtrarStatus = (e) => {
         console.log(e.target.value);
         setFiltro(e.target.value);
     }
 
-    console.log(filtro);
+    console.log(filtro);*/
 
     useEffect(() => {
         obtenerPersonajes();
@@ -35,7 +41,8 @@ export default function PersonajesInfo(){
     
     return(
         <div className="row">
-            <div>
+            <Filter setEstado={setEstado} setEspecie={setEspecie} />
+            {/**<div>
                 <select onChange={filtrarStatus}>
                     <option value="Humanoid">Humanoide</option>
                     <option value="Alien">Alien</option>
@@ -48,13 +55,13 @@ export default function PersonajesInfo(){
                     <option value="Cronenberg">Cronenberg</option>
                     <option value="Disease">Disease</option>
                 </select>
-            </div>
+            </div>*/}
+        
             
-            {/**
-                personajes.map((personaje, indice) => {
+            
+                {/**personajes.map((personaje, indice) => {
                     return <TarjetaPersonaje key={indice} {...personaje} />
-                })
-            */}
+                })*/}
             {/**
                 personajes.filter((propiedad) => {
                     return propiedad.status.includes(filtro)
@@ -65,9 +72,7 @@ export default function PersonajesInfo(){
                 })
             */}
             {
-                personajes.filter((propiedad) => {
-                    return propiedad.species.includes(filtro)
-                }).map((personaje, indice) => {
+                personajes.map((personaje, indice) => {
                     return <TarjetaPersonaje key={indice} {...personaje} />
                 })
             }
