@@ -1,0 +1,72 @@
+p {
+    margin: 0;
+}
+
+/***** App.js ******/
+.container-fluid {
+    margin: 0px;
+    padding: 0px;
+}
+
+.row {
+    margin: 0px;
+    padding: 0px;
+}
+
+.col {
+    padding: 0px;
+}
+
+
+
+/***** SIDE BAR ******/
+.sidebar {
+    width: 285px;
+    height: 1024px;
+    background: rgba(245, 245, 245, 0.4);
+    box-shadow: 0px -18px 72px -47px rgba(0, 0, 0, 0.25);
+    backdrop-filter: blur(25px);
+    border-radius: 0px 25px 25px 0px;
+}
+
+/***** CARDS *****/ 
+
+.image-cards {
+    width: 165px;
+    height: 128px;
+    object-fit: cover;
+    border-radius: 6px;
+    border: 1px solid black;
+    
+}
+
+.card {
+    border: 1px solid black;
+    --bs-card-cap-bg: none;
+    width: 200px;
+    height: 275px;
+    --bs-card-border-color: none;
+    background-color:rgba(245, 245, 245, 0.24);
+    box-shadow: 0px 0px 9px rgba(0, 0, 0, 0.25);
+}
+
+.nombres-card {
+    font-family: 'Inter', sans-serif;
+    font-weight: 800px;
+}
+
+.card-body {
+    padding-top: 1px;
+}
+
+.boton-tarjetas {
+    width: 111px;
+    height: 26px;
+    background-color: var(--verdeClaro);
+    border: 1px solid black;
+    text-align: center;
+}
+
+.boton-tarjetas:hover{
+    background-color: var(--celeste);
+}
