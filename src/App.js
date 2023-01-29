@@ -6,6 +6,7 @@ import Sidebar from './components/Sidebar';
 import Estilos from './Estilos.css';
 
 function App() {
+  
   return (
     <div className="App">
 
