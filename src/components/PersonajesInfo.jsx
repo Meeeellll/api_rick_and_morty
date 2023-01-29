@@ -3,7 +3,7 @@ import TarjetaPersonaje from "./TarjetaPersonaje";
 
 export default function PersonajesInfo(){
     
-    const [personajes, setPersonajes] = useState("");
+    const [personajes, setPersonajes] = useState([]);
 
     // const [contador, setContador] = useState(0);
 
@@ -36,19 +36,20 @@ export default function PersonajesInfo(){
     return(
         <div className="row">
             <div>
-            <select onChange={filtrarStatus}>
-        <option value="Humanoid">Humanoide</option>
-        <option value="Alien">Alien</option>
-        <option value="Human">Humano</option>
-        <option value="Mythological Creature">Criatura Mitologica</option>
-        <option value="unknown">Desconocido</option>
-        <option value="Poopybutthole">Poopybutthole</option>
-        <option value="Animal">Animal</option>
-        <option value="Robot">Robot</option>
-        <option value="Cronenberg">Cronenberg</option>
-        <option value="Disease">Disease</option>
-      </select>
+                <select onChange={filtrarStatus}>
+                    <option value="Humanoid">Humanoide</option>
+                    <option value="Alien">Alien</option>
+                    <option value="Human">Humano</option>
+                    <option value="Mythological Creature">Criatura Mitologica</option>
+                    <option value="unknown">Desconocido</option>
+                    <option value="Poopybutthole">Poopybutthole</option>
+                    <option value="Animal">Animal</option>
+                    <option value="Robot">Robot</option>
+                    <option value="Cronenberg">Cronenberg</option>
+                    <option value="Disease">Disease</option>
+                </select>
             </div>
+            
             {/**
                 personajes.map((personaje, indice) => {
                     return <TarjetaPersonaje key={indice} {...personaje} />
@@ -70,6 +71,11 @@ export default function PersonajesInfo(){
                     return <TarjetaPersonaje key={indice} {...personaje} />
                 })
             }
+            {/**
+                personajes.map((personaje, indice) => {
+                    return <TarjetaPersonaje key={indice} {...personaje} />
+                })
+            */}
             
         </div>
     )
