@@ -3,7 +3,7 @@ import Especie from "../Filters/Categorias/Especie";
 import Genero from "../Filters/Categorias/Genero";
 import Estado from "../Filters/Categorias/Estado";
 
-const Filter = ({ setEstado, setPageNumber, setEspecie }) => {
+const Filter = ({ setEstado, setEspecie }) => {
     return (
         <div className="col-3">
             <div className="text-center">Filter</div>

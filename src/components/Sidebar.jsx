@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import Estilos from "../Estilos.css";
+//import Estilos from "../Estilos.css";
 
 export default class Sidebar extends Component {
     

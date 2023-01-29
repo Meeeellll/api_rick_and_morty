@@ -3,7 +3,7 @@ import React from 'react';
 // import Parent from './components/Parent';
 import PersonajesInfo from './components/PersonajesInfo';
 import Sidebar from './components/Sidebar';
-import Estilos from './Estilos.css';
+//import Estilos from './Estilos.css';
 
 function App() {
   

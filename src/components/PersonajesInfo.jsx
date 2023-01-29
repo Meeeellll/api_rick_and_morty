@@ -7,7 +7,7 @@ export default function PersonajesInfo(){
 
     const [personajes, setPersonajes] = useState([]);
     let [estado, setEstado] = useState("Dead");
-    let [especie, setEspecie] = useState("");
+    let [especie, setEspecie] = useState("Human");
 
 
     // const [contador, setContador] = useState(0);
