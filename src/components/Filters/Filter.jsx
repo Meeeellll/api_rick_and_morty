@@ -8,7 +8,7 @@ const Filter = ({ setEstado, setEspecie }) => {
         <div className="col-3">
             <div className="text-center">Filter</div>
             <div>
-                <button type="button" class="btn btn-outline-dark">Limpiar</button>
+                <button type="button" className="btn btn-outline-dark">Limpiar</button>
                 <Especie setEspecie={setEspecie}/>
                 <Genero />
                 <Estado setEstado={setEstado}/>

@@ -1,17 +1,23 @@
 import React, { useState, useEffect } from "react";
 //import Estado from "./Filters/Categorias/Estado";
-import Filter from "./Filters/Filter";
+//import Filter from "./Filters/Filter";
 import TarjetaPersonaje from "./TarjetaPersonaje";
+import Especie from "./Filters/Categorias/Especie";
 
 export default function PersonajesInfo(){
 
     const [personajes, setPersonajes] = useState([]);
-    let [estado, setEstado] = useState("Dead");
-    let [especie, setEspecie] = useState("Human");
+    //let [estado, setEstado] = useState([]);
+    const [especie, setEspecie] = useState("");
+
+    const filtrarEspecie = (e) => {
+        console.log(e.target.value);
+        setEspecie(e.target.value);
+    }
 
 
     // const [contador, setContador] = useState(0);
-    let api = `https://rickandmortyapi.com/api/character/?status=${estado}&species=${especie}`;
+    let api = `https://rickandmortyapi.com/api/character/?species=${especie}`;
 
     const obtenerPersonajes = async () => {
         let resultado = await fetch(api);
@@ -33,6 +39,8 @@ export default function PersonajesInfo(){
 
     console.log(filtro);*/
 
+    
+
     useEffect(() => {
         obtenerPersonajes();
     }, []);
@@ -41,9 +49,10 @@ export default function PersonajesInfo(){
     
     return(
         <div className="row">
-            <Filter setEstado={setEstado} setEspecie={setEspecie} />
+            <Especie onChange={filtrarEspecie} placeholder="Especies"/>
+            
             {/**<div>
-                <select onChange={filtrarStatus}>
+                <select onChange={filtrarEspecie} placeholder="Especies">
                     <option value="Humanoid">Humanoide</option>
                     <option value="Alien">Alien</option>
                     <option value="Human">Humano</option>
@@ -55,7 +64,7 @@ export default function PersonajesInfo(){
                     <option value="Cronenberg">Cronenberg</option>
                     <option value="Disease">Disease</option>
                 </select>
-            </div>*/}
+    </div>*/}
         
             
             

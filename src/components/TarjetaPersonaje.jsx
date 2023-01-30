@@ -14,7 +14,7 @@ export default function TarjetaPersonaje(props){
                     <p><b>Status:</b> {props.status} </p>
                 </div>
                 <div className="card-footer">
-                    <a href="/" class="btn btn-primary boton-tarjetas">LEER MÁS</a>
+                    <a href="/" className="btn btn-primary boton-tarjetas">LEER MÁS</a>
                 </div>
             </div>
 

@@ -1,9 +1,10 @@
 import React from "react";
+import TarjetaPersonaje from "../../TarjetaPersonaje";
 
-const Especie = ({ setEspecie }) => {
+export default function Especie( { setEspecie } ){
     return (
         <div className="row">
-                <select /**onChange={setEspecie}*/>
+                <select onChange={setEspecie} placeholder="Especies" name="especiesSelect">
                     <option value="Humanoid">Humanoide</option>
                     <option value="Alien">Alien</option>
                     <option value="Human">Humano</option>
@@ -15,8 +16,12 @@ const Especie = ({ setEspecie }) => {
                     <option value="Cronenberg">Cronenberg</option>
                     <option value="Disease">Disease</option>
                 </select>
+
+                {/**
+                    especie.map((items, indice, task) => {
+                        return <TarjetaPersonaje items={items} key={indice} {...personaje} />
+                    })
+                */}
         </div>
     );
-};
-
-export default Especie
+}
