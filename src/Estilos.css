@@ -18,7 +18,6 @@ p {
 }
 
 
-
 /***** SIDE BAR ******/
 .sidebar {
     width: 285px;
@@ -70,3 +69,181 @@ p {
 .boton-tarjetas:hover{
     background-color: var(--celeste);
 }
+
+/** EL SELECT ***/
+.content-input input,
+.content-select select {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+}
+
+.content-select select::-ms-expand{
+    display: none;
+}
+
+.content-select{
+    max-width: 250px;
+    position: relative;
+}
+    
+.content-select select{
+    display: inline-block;
+    width: 100%;
+    cursor: pointer;
+      padding: 4px 10px;
+      height: 30px;
+      outline: 0; 
+      border: 0;
+    border-radius: 0;
+    background: #f0f0f000;
+    color: rgba(0, 0, 0, 0.352);
+    font-size: 15px;
+    font-weight: 600;
+    color: rgba(0, 0, 0, 0.352);
+    font-family: 'Quicksand', sans-serif;
+    border:2px solid rgba(0, 0, 0, 0.352);
+       border-radius: 5px;
+       position: absolute;
+       transition: all 0.25s ease;
+   }
+    
+   
+    
+   /* 
+   Creamos la fecha que aparece a la izquierda del select.
+   Realmente este elemento es un cuadrado que sólo tienen
+   dos bordes con color y que giramos con transform: rotate(-45deg);
+   */
+   .content-select i{
+    position: absolute;
+    right: 20px;
+    top: calc(50% - 13px);
+    width: 16px;
+    height: 16px;
+    display: block;
+    border-left:4px;
+    border-bottom:4px;
+    transform: rotate(-45deg); /* Giramos el cuadrado */
+    transition: all 0.25s ease;
+   }
+    
+   .imgNav{
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 50%;
+   }
+
+   /**div .imgNav {
+    display: flex;
+    flex-direction: column;
+    margin-left: 10px;
+    margin-right: 10px;
+   }*/
+
+   .carousel-indicators [data-bs-target] {
+    margin-left: 10px;
+    margin-right: 80px;
+   }
+
+   /**.darEspacio {
+    margin-top: 400px;
+   }*/
+
+   .elemento-dev {
+    display: flex;
+    flex-direction: row;
+    column-gap: 25px;
+   }
+
+   .info-desarrolladoras {
+    width: 50%;
+    margin-right: 0px;
+    display: flex;
+    flex-direction: column;
+    /**align-items: center;*/
+    justify-content: top;
+   }
+
+   .imagen-desarrolladoras {
+    width: 50%;
+    margin-right: 0px;
+    padding: 0px;
+    margin: 0px;
+   }
+
+   .imagen-desarrolladoras img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+   }
+
+   .infoSpace {
+    margin-bottom: 20px;
+   }
+
+   .indicadores {
+    margin-top: 35px;
+    margin-bottom: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+   }
+
+   .indicadores button {
+    border: 1px solid black;
+    /**margin: 10px;*/
+    background-color: #f0f0f000;
+   }
+
+   .indicadores img {
+    height: 75px;
+    width: 75px;
+    border-radius: 12px;
+    border: 1.5px solid black;
+   }
+
+   .infoContainer {
+    height: auto;
+    width: 100%;
+    margin-bottom: 25px;
+   }
+
+   .aboutMe {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+   }
+
+   .aboutMe p {
+    background-color: #8BCF21;
+    position: absolute;
+    height: auto;
+    width: 350px;
+    bottom: 15px;
+    padding: 10px;
+    border-radius: 12px;
+   }
+
+   .desarrolladoraName {
+    /**align-items: center;*/
+    font-size: 45px;
+    margin-bottom: 25px;
+    text-align: center;
+   }
+
+   /**.accordion {
+    --bs-accordion-active-color: #2F9331;
+    --bs-accordion-active-bg: #8BCF2150;
+    --bs-accordion-btn-active-icon: url("file:///C:/Users/Glenda%20Moreno/Downloads/angle-small-down.svg")
+    --bs-accordion-btn-focus-border-color: #8BCF21;
+    --bs-accordion-btn-focus-box-shadow: #8BCF2120;
+   }*/
+
+   .infoSpace strong {
+    color: #2b842d;
+    font-size: 17px;
+   }

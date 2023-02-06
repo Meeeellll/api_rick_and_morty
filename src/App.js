@@ -1,4 +1,5 @@
 import React from 'react';
+import Desarrolladoras from './components/Desarrolladoras';
 
 // import Parent from './components/Parent';
 import PersonajesInfo from './components/PersonajesInfo';
@@ -14,13 +15,13 @@ function App() {
         <div className='row '>
 
           <div className='col col-3 left'>
-            
             <Sidebar />
+            
           </div>
 
 
-          <div className='col col-9 right'>
-            
+          <div className='col col-8 right'>
+            <Desarrolladoras />
 
             <div className='contenedor-cards'>
               <PersonajesInfo />
